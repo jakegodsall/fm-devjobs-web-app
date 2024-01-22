@@ -1,0 +1,37 @@
+.toggle {
+  position: relative;
+}
+
+.toggle__input {
+  /* visibility: hidden; */
+}
+
+.toggle__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-inline: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  height: 2.6rem;
+  width: 5rem;
+  background-color: #fff;
+  border-radius: 2rem;
+}
+
+.toggle__label::after {
+  content: "";
+  z-index: 10;
+  background-color: var(--violet);
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 5rem;
+  transition: transform 0.4s ease-in-out;
+}
+
+.toggle__input:checked + .toggle__label::after {
+  transform: translateX(calc(100% + 0.8rem));
+}
