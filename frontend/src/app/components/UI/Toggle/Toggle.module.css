@@ -1,23 +1,25 @@
 .toggle {
   position: relative;
+  height: 2.6rem;
+  width: 5rem;
 }
 
 .toggle__input {
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 .toggle__label {
   position: absolute;
   top: 0;
   right: 0;
+  height: 100%;
+  width: 100%;
   padding-inline: 0.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
   cursor: pointer;
-  height: 2.6rem;
-  width: 5rem;
   background-color: #fff;
   border-radius: 2rem;
 }
