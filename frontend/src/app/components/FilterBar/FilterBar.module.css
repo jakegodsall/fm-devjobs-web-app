@@ -1,0 +1,51 @@
+.filterBar {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 1.6rem 1.6rem 1.6rem 2.4rem;
+  background-color: #fff;
+  border-radius: 0.6rem;
+}
+
+.filterBar__input {
+  font-size: 1.6rem;
+  flex: 1;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border: none;
+  caret-shape: block;
+}
+
+.filterBar__input:focus {
+  outline: none;
+  caret-color: var(--violet);
+}
+
+.filterBar__filterIcon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.filterBar__searchIcon {
+  position: relative;
+  box-sizing: content-box;
+
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  filter: brightness(0) invert(100%);
+}
+
+.filterBar__searchIconBackground {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: var(--violet);
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
