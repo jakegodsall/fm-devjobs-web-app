@@ -1,0 +1,35 @@
+.jobListingItem {
+  background-color: #fff;
+  border-radius: 0.6rem;
+  width: 90%;
+  padding: 3.6rem 3.2rem;
+}
+
+.jobListingItem__mainContent {
+}
+
+.jobListingItem__topRow {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.6rem;
+  color: var(--dark-grey);
+  margin-bottom: 1.6rem;
+}
+
+.jobListingItem__position {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.jobListingItem__company {
+  font-size: 1.6rem;
+  color: var(--dark-grey);
+  margin-bottom: 4.4rem;
+}
+
+.jobListingItem__location {
+  color: vaR(--violet);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
