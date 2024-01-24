@@ -5,6 +5,12 @@
   padding: 3.6rem 3.2rem;
 }
 
+.jobListingItem__image {
+  width: 5rem;
+  height: 5rem;
+  background-color: red;
+}
+
 .jobListingItem__mainContent {
 }
 

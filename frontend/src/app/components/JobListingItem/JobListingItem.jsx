@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import styles from "./JobListingItem.module.css";
 
 export default function JobListingItem({
@@ -11,6 +13,12 @@ export default function JobListingItem({
 }) {
   return (
     <div className={styles.jobListingItem}>
+      <Image
+        className={styles.jobListingItem__image}
+        src={logo}
+        alt={`${company} logo`}
+        layout="responsive"
+      />
       <div className={styles.jobListingItem__mainContent}>
         <div className={styles.jobListingItem__topRow}>
           <p>{postedAt}</p>
