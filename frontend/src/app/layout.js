@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
       <body className={kumbhSans.className}>
         <Header />
         {children}
+        <div id="modal-root"></div>
       </body>
     </html>
   );
