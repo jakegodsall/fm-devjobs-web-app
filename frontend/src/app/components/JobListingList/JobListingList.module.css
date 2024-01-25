@@ -1,5 +1,10 @@
-.jobListingList {
+.jobListingList__list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5rem;
+}
+
+.jobListingList__item {
+  width: 90%;
 }

@@ -13,12 +13,12 @@ export default function JobListingItem({
 }) {
   return (
     <div className={styles.jobListingItem}>
-      <Image
+      {/* <Image
         className={styles.jobListingItem__image}
         src={logo}
         alt={`${company} logo`}
         layout="responsive"
-      />
+      /> */}
       <div className={styles.jobListingItem__mainContent}>
         <div className={styles.jobListingItem__topRow}>
           <p>{postedAt}</p>
