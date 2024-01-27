@@ -21,6 +21,7 @@ html {
 
 body {
   margin: 0;
+  color: var(--very-dark-blue);
   background-color: #f4f6f8;
 }
 
