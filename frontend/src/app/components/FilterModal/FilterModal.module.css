@@ -6,6 +6,9 @@
   border-radius: 0.6rem;
 }
 
+.filterModal__separator {
+}
+
 .filterModal__content {
   padding: 2.4rem;
 }
@@ -17,4 +20,10 @@
 
   font-size: 1.6rem;
   font-weight: 700;
+
+  margin-bottom: 2.4rem;
+}
+
+.filterModal_fullTimeLabel {
+  cursor: pointer;
 }

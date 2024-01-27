@@ -1,0 +1,40 @@
+.checkbox {
+  position: relative;
+}
+
+.checkbox__tick.checked {
+  opacity: 1;
+  transform: rotate(720deg);
+}
+
+.checkbox__original {
+  position: absolute; /* Position the original checkbox absolutely */
+  top: 0;
+  left: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox__custom {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--light-grey);
+  border-radius: 0.3rem;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox__tick {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.checkbox__original:checked + .checkbox__tick {
+  opacity: 1;
+}
