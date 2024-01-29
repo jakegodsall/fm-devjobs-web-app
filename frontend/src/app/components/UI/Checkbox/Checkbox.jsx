@@ -13,25 +13,23 @@ export default function Checkbox({ name, id }) {
   }
 
   return (
-    <>
-      <div className={styles.checkbox}>
-        <input
-          className={styles.checkbox__original}
-          type="checkbox"
-          name={name}
-          id={id}
-          onChange={toggleCheckbox}
+    <div className={styles.checkbox}>
+      <input
+        className={styles.checkbox__original}
+        type="checkbox"
+        name={name}
+        id={id}
+        onChange={toggleCheckbox}
+      />
+      <div className={styles.checkbox__custom}>
+        <Image
+          className={`${styles.checkbox__tick} ${
+            isChecked ? styles.checked : ""
+          }`}
+          src={checkIcon}
+          alt="Checkbox tick"
         />
-        <div className={styles.checkbox__custom}>
-          <Image
-            className={`${styles.checkbox__tick} ${
-              isChecked ? styles.checked : ""
-            }`}
-            src={checkIcon}
-            alt="Checkbox tick"
-          />
-        </div>
       </div>
-    </>
+    </div>
   );
 }

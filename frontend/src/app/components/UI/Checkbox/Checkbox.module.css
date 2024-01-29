@@ -21,7 +21,7 @@
 .checkbox__custom {
   width: 2.4rem;
   height: 2.4rem;
-  background-color: var(--light-grey);
+  background-color: #d1d1d1;
   border-radius: 0.3rem;
   z-index: 1;
 
