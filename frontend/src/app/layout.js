@@ -4,6 +4,7 @@ import "./globals.css";
 const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
 
 import Header from "./components/Header/Header";
+import { DarkModeProvider } from "./context/DarkModeContext";
 
 export const metadata = {
   title: "Devjobs Web App (Frontend Mentor)",
@@ -14,9 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={kumbhSans.className}>
-        <Header />
-        {children}
-        <div id="modal-root"></div>
+        <DarkModeProvider>
+          <Header />
+          {children}
+          <div id="modal-root"></div>
+        </DarkModeProvider>
       </body>
     </html>
   );
