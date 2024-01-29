@@ -10,15 +10,15 @@ import MoonIcon from "@public/assets/desktop/icon-moon.svg";
 import SunIcon from "@public/assets/desktop/icon-sun.svg";
 
 import styles from "./DarkModeToggle.module.css";
-import { DarkModeContext } from "@/app/context/DarkModeContext";
+import { ThemeContext } from "@/app/context/ThemeContext";
 
 export default function DarkModeToggle() {
-  const { toggleDarkMode } = useContext(DarkModeContext);
+  const { toggleTheme } = useContext(ThemeContext);
   const [toggleDark, setToggleDark] = useState(false);
 
   function handleToggle() {
     setToggleDark((prevState) => !prevState);
-    toggleDarkMode();
+    toggleTheme();
   }
 
   return (
