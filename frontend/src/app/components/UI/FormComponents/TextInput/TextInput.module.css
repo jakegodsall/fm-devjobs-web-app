@@ -1,0 +1,13 @@
+.textInput {
+  font-size: 1.6rem;
+  flex: 1;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border: none;
+  caret-shape: block;
+}
+
+.textInput:focus {
+  outline: none;
+  caret-color: var(--violet);
+}
