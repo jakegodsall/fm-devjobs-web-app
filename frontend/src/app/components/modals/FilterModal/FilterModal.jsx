@@ -1,9 +1,9 @@
 import locationIcon from "@public/assets/desktop/icon-location.svg";
 
-import Button from "../UI/FormComponents/Button/Button";
-import Checkbox from "../UI/FormComponents/Checkbox/Checkbox";
-import TextInput from "../UI/FormComponents/TextInput/TextInput";
-import Modal from "../UI/Modal/Modal";
+import Button from "../../UI/FormComponents/Button/Button";
+import Checkbox from "../../UI/FormComponents/Checkbox/Checkbox";
+import TextInput from "../../UI/FormComponents/TextInput/TextInput";
+import Modal from "../../UI/Modal/Modal";
 
 import styles from "./FilterModal.module.css";
 import Image from "next/image";
