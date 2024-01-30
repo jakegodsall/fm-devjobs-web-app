@@ -1,12 +1,20 @@
 .filterModal {
   width: 32.7rem;
   background-color: #fff;
-  padding-top: 2.4rem;
 
-  border-radius: 0.6rem;
+  border-radius: 0.8rem;
+}
+
+.filterModal__topLine {
+  padding: 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
 }
 
 .filterModal__separator {
+  background-color: #6e8098;
+  opacity: 0.2;
 }
 
 .filterModal__content {

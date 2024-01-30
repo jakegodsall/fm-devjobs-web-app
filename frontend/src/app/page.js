@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <FilterBar />
       <JoblistingList />
-      {/* <FilterModal /> */}
+      <FilterModal />
     </div>
   );
 }

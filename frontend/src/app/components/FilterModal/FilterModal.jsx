@@ -1,15 +1,19 @@
+import locationIcon from "@public/assets/desktop/icon-location.svg";
+
 import Button from "../UI/FormComponents/Button/Button";
 import Checkbox from "../UI/FormComponents/Checkbox/Checkbox";
 import TextInput from "../UI/FormComponents/TextInput/TextInput";
 import Modal from "../UI/Modal/Modal";
 
 import styles from "./FilterModal.module.css";
+import Image from "next/image";
 
 export default function FilterModal() {
   return (
     <Modal>
       <form className={styles.filterModal}>
-        <div className={styles.filterModall__topLine}>
+        <div className={styles.filterModal__topLine}>
+          <Image src={locationIcon} alt="location" height="24" width="17" />
           <TextInput
             placeholder="Filter by location..."
             id="location-filter"
