@@ -1,10 +1,14 @@
 .jobListingItem {
-  background-color: #fff;
-  border-radius: 0.6rem;
-  width: 100%;
+  position: relative;
+
+  margin: 0 auto;
   padding: 3.6rem 3.2rem;
 
-  position: relative;
+  width: 100%;
+  max-width: 35rem;
+
+  border-radius: 0.6rem;
+  background-color: #fff;
 }
 
 .jobListingItem__imageContainer {
