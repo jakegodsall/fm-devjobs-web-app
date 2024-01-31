@@ -13,12 +13,18 @@ export default function JobListingItem({
 }) {
   const style = {
     backgroundColor: logoBackground,
+    border: `0.5rem solid ${logoBackground}`,
   };
 
   return (
     <div className={styles.jobListingItem}>
       <div className={styles.jobListingItem__imageContainer} style={style}>
-        <Image src={logo} alt={`${company} logo`} fill />
+        <Image
+          src={logo}
+          alt={`${company} logo`}
+          layout="fill"
+          style={{ objectFit: "contain" }}
+        />
       </div>
       <div className={styles.jobListingItem__mainContent}>
         <div className={styles.jobListingItem__topRow}>

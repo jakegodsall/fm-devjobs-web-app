@@ -10,9 +10,10 @@
 .jobListingItem__imageContainer {
   top: -3rem;
   position: absolute;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 1rem;
+  padding: 1rem;
 }
 
 .jobListingItem__image {
