@@ -11,14 +11,15 @@ export default function JobListingItem({
   postedAt,
   location,
 }) {
+  const style = {
+    backgroundColor: logoBackground,
+  };
+
   return (
     <div className={styles.jobListingItem}>
-      {/* <Image
-        className={styles.jobListingItem__image}
-        src={logo}
-        alt={`${company} logo`}
-        layout="responsive"
-      /> */}
+      <div className={styles.jobListingItem__imageContainer} style={style}>
+        <Image src={logo} alt={`${company} logo`} fill />
+      </div>
       <div className={styles.jobListingItem__mainContent}>
         <div className={styles.jobListingItem__topRow}>
           <p>{postedAt}</p>

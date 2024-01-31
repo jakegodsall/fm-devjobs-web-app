@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 5rem;
+  margin-bottom: 6.2rem;
 }
 
 .jobListingList__item {

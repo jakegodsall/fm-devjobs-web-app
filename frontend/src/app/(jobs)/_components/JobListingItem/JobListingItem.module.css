@@ -3,11 +3,19 @@
   border-radius: 0.6rem;
   width: 100%;
   padding: 3.6rem 3.2rem;
+
+  position: relative;
+}
+
+.jobListingItem__imageContainer {
+  top: -3rem;
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
 }
 
 .jobListingItem__image {
-  width: 5rem;
-  height: 5rem;
   background-color: red;
 }
 
