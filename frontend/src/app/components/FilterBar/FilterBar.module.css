@@ -1,20 +1,38 @@
+/* Mobile Styles */
+
 .filterBar {
   margin: 0 auto;
   width: 100%;
   display: flex;
   align-items: center;
   gap: 2.4rem;
-  padding-inline: 2.4rem;
+  padding-inline: 1.6rem;
   background-color: #fff;
   border-radius: 0.6rem;
   margin-bottom: 5.7rem;
 
   max-width: 35rem;
+}
 
-  @media screen and (min-width: 760px) {
-    width: 93%;
-    max-width: 74rem;
-  }
+.filterBar__titleSection {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2.4rem;
+}
+
+.filterBar__locationSection {
+  display: none;
+}
+
+.filterBar__contractSection {
+  display: none;
+}
+
+.filterBar__mobileButtons {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
 }
 
 .filterBar__filterIcon {
@@ -42,4 +60,66 @@
   justify-content: center;
   cursor: pointer;
   border: none;
+}
+
+.filterBar__searchIconDesktop {
+  display: none;
+}
+
+/* Desktop Styles */
+
+@media screen and (min-width: 760px) {
+  .filterBar {
+    width: 93%;
+    max-width: 74rem;
+  }
+
+  .filterBar__mobileButtons {
+    display: none;
+  }
+
+  .filterBar__titleSection {
+    flex: 1;
+  }
+
+  .filterBar__locationSection {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .filterBar__contractSection {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  .filterBar__contractCheckboxContainer {
+    flex: 3;
+
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .filterBar__contactButton {
+    flex: 2;
+  }
+
+  .filterBar__fullTimeLabel {
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .filterBar__searchIconDesktop {
+    display: inline;
+  }
+}
+
+.filterBar__searchIconDesktop {
 }
