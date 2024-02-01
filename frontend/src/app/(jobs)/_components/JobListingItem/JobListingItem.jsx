@@ -14,12 +14,13 @@ export default function JobListingItem({
 }) {
   return (
     <div className={styles.jobListingItem}>
-      <CompanyLogo
-        src={logo}
-        logoBackground={logoBackground}
-        alt={`${company} logo`}
-      />
-
+      <div className={styles.jobListingItem__companyLogoContainer}>
+        <CompanyLogo
+          src={logo}
+          logoBackground={logoBackground}
+          alt={`${company} logo`}
+        />
+      </div>
       <div className={styles.jobListingItem__mainContent}>
         <div className={styles.jobListingItem__topRow}>
           <p>{postedAt}</p>

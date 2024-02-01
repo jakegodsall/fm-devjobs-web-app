@@ -11,11 +11,13 @@ export default function JobItemCompanyInfo({
 }) {
   return (
     <div className={styles.jobItemCompanyInfo}>
-      <CompanyLogo
-        src={logo}
-        logoBackground={logoBackground}
-        alt={`${company} logo`}
-      />
+      <div className={styles.jobItemCompanyInfo__logoContainer}>
+        <CompanyLogo
+          src={logo}
+          logoBackground={logoBackground}
+          alt={`${company} logo`}
+        />
+      </div>
       <p className={styles.jobItemCompanyInfo__title}>{company}</p>
       <p className={styles.jobItemCompanyInfo__website}>{website}</p>
       <div className={styles.jobItemCompanyInfo__buttonContainer}>
