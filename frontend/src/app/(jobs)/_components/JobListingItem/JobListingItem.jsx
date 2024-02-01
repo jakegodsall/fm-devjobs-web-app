@@ -22,7 +22,7 @@ export default function JobListingItem({
         <Image
           src={logo}
           alt={`${company} logo`}
-          layout="fill"
+          fill
           style={{ objectFit: "contain" }}
         />
       </div>
