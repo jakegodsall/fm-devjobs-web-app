@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import styles from "./JobListingItem.module.css";
+import CompanyLogo from "@/app/components/CompanyLogo/CompanyLogo";
 
 export default function JobListingItem({
   company,
@@ -11,21 +12,14 @@ export default function JobListingItem({
   postedAt,
   location,
 }) {
-  const style = {
-    backgroundColor: logoBackground,
-    border: `0.5rem solid ${logoBackground}`,
-  };
-
   return (
     <div className={styles.jobListingItem}>
-      <div className={styles.jobListingItem__imageContainer} style={style}>
-        <Image
-          src={logo}
-          alt={`${company} logo`}
-          fill
-          style={{ objectFit: "contain" }}
-        />
-      </div>
+      <CompanyLogo
+        src={logo}
+        logoBackground={logoBackground}
+        alt={`${company} logo`}
+      />
+
       <div className={styles.jobListingItem__mainContent}>
         <div className={styles.jobListingItem__topRow}>
           <p>{postedAt}</p>

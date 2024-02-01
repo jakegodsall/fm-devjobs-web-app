@@ -1,0 +1,8 @@
+.companyLogoContainer {
+  top: -2rem;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
