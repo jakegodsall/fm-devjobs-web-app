@@ -3,7 +3,7 @@ import JobItemHeader from "./components/JobItemHeader/JobItemCompanyInfo";
 const DUMMY_DATA = {
   id: 1,
   company: "Scoot",
-  logo: "./assets/logos/scoot.svg",
+  logo: "/assets/logos/scoot.svg",
   logoBackground: "hsl(36, 87%, 49%)",
   position: "Senior Software Engineer",
   postedAt: "5h ago",

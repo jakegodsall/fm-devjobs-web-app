@@ -2,12 +2,21 @@
   width: 100%;
   padding: 1.6rem 0;
 
+  font-size: 1.6rem;
   font-weight: 700;
   color: #fff;
 
-  background-color: var(--violet);
   border: 0;
   border-radius: 0.5rem;
 
   cursor: pointer;
+}
+
+.button___primary {
+  background-color: var(--violet);
+}
+
+.button___secondary {
+  color: var(--violet);
+  background-color: rgba(89, 100, 224, 0.2);
 }

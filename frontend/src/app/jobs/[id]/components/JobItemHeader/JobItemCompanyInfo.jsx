@@ -21,7 +21,7 @@ export default function JobItemCompanyInfo({
       <p className={styles.jobItemCompanyInfo__title}>{company}</p>
       <p className={styles.jobItemCompanyInfo__website}>{website}</p>
       <div className={styles.jobItemCompanyInfo__buttonContainer}>
-        <Button>Company Site</Button>
+        <Button variant="secondary">Company Site</Button>
       </div>
     </div>
   );
