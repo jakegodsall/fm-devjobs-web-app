@@ -29,9 +29,13 @@ export default function JobDetailsInfo({
         <p className={styles.requirementsSection__description}>
           {requirements.content}
         </p>
-        <ul>
+        <ul className={styles.requirementsSection__list}>
           {requirements.items.map((item, idx) => {
-            return <li key={idx}>{item}</li>;
+            return (
+              <li className={styles.requirementsSection__listItem} key={idx}>
+                {item}
+              </li>
+            );
           })}
         </ul>
       </section>

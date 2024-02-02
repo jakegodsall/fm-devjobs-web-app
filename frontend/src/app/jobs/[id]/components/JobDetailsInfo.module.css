@@ -62,5 +62,31 @@
   font-size: 2rem;
   color: #6e8098;
   line-height: 1.7;
+  margin-bottom: 2rem;
 }
 
+.requirementsSection__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  font-size: 2rem;
+  color: #6e8098;
+  line-height: 1.7;
+}
+
+.requirementsSection__listItem {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.requirementsSection__listItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--violet);
+}
