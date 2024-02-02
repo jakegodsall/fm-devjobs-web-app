@@ -1,3 +1,4 @@
+import JobDetailsInfo from "./components/JobDetailsInfo";
 import JobItemHeader from "./components/JobItemHeader/JobItemCompanyInfo";
 
 const DUMMY_DATA = {
@@ -43,6 +44,16 @@ export default function JobItemPage() {
         logoBackground={DUMMY_DATA.logoBackground}
         company={DUMMY_DATA.company}
         website={DUMMY_DATA.website}
+      />
+      <JobDetailsInfo
+        postedAt={DUMMY_DATA.postedAt}
+        contract={DUMMY_DATA.contract}
+        position={DUMMY_DATA.position}
+        location={DUMMY_DATA.location}
+        apply={DUMMY_DATA.apply}
+        description={DUMMY_DATA.description}
+        requirements={DUMMY_DATA.requirements}
+        role={DUMMY_DATA.role}
       />
     </section>
   );
