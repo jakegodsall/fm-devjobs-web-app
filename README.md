@@ -18,6 +18,12 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
+### What I've Learned
+
+- The simplicity of constructing condition class names using [clsx](https://www.npmjs.com/package/clsx).
+- Creating UI components with a `variant` design pattern for improved flexibility.
+- Custom `<ol>` using CSS counters.
+
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
