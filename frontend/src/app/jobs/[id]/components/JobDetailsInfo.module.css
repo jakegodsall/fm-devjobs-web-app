@@ -38,3 +38,29 @@
   color: var(--violet);
   font-weight: 700;
 }
+
+.jobDetailsInfo__mainDescription {
+  margin: 3rem 0;
+
+  font-size: 2rem;
+  color: #6e8098;
+  line-height: 1.7;
+}
+
+/* Requirements Section */
+
+.requirementsSection {
+}
+
+.requirementsSection__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.requirementsSection__description {
+  font-size: 2rem;
+  color: #6e8098;
+  line-height: 1.7;
+}
+
