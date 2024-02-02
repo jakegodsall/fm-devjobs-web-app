@@ -39,6 +39,19 @@ export default function JobDetailsInfo({
           })}
         </ul>
       </section>
+      <section className={styles.roleSection}>
+        <p className={styles.roleSection__title}>What you will do</p>
+        <p className={styles.roleSection__description}>{role.content}</p>
+        <ol className={styles.roleSection__list}>
+          {role.items.map((item, idx) => {
+            return (
+              <li className={styles.roleSection__listItem} key={idx}>
+                {item}
+              </li>
+            );
+          })}
+        </ol>
+      </section>
     </div>
   );
 }

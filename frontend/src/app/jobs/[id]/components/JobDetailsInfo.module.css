@@ -50,6 +50,7 @@
 /* Requirements Section */
 
 .requirementsSection {
+  margin-bottom: 3rem;
 }
 
 .requirementsSection__title {
@@ -89,4 +90,49 @@
   height: 0.6rem;
   border-radius: 50%;
   background-color: var(--violet);
+}
+
+/* Roles Section */
+
+.roleSection {
+}
+
+.roleSection__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.roleSection__description {
+  font-size: 2rem;
+  color: #6e8098;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.roleSection__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  font-size: 2rem;
+  color: #6e8098;
+  line-height: 1.7;
+
+  counter-reset: custom-counter;
+}
+
+.roleSection__listItem {
+  counter-increment: custom-counter;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.roleSection__listItem::before {
+  content: counter(custom-counter);
+  position: absolute;
+  left: 0;
+
+  font-weight: 700;
+  color: var(--violet);
 }
