@@ -8,7 +8,7 @@
   max-width: 35rem;
 
   border-radius: 0.6rem;
-  background-color: #fff;
+  background-color: var(--foreground);
 }
 
 .jobListingItem__companyLogoContainer {
@@ -31,6 +31,8 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.6rem;
+
+  color: var(--mainTitle);
 }
 
 .jobListingItem__company {

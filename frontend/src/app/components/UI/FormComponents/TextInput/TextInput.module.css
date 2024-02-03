@@ -6,6 +6,9 @@
   padding: 2.4rem 0;
   border: none;
   caret-shape: block;
+
+  color: var(--mainTitle);
+  background: inherit;
 }
 
 .textInput:focus {

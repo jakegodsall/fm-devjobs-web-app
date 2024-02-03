@@ -7,11 +7,12 @@
   align-items: center;
   gap: 2.4rem;
   padding-inline: 1.6rem;
-  background-color: #fff;
   border-radius: 0.6rem;
   margin-bottom: 5.7rem;
 
   max-width: 35rem;
+
+  background-color: var(--foreground);
 }
 
 .filterBar__titleSection {
@@ -121,5 +122,4 @@
   }
 }
 
-.filterBar__searchIconDesktop {
-}
+

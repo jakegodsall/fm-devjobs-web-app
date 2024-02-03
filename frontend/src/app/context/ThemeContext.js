@@ -40,15 +40,23 @@ export function ThemeProvider({ children }) {
     }
   }, []);
 
-  // Set user preference in the local storage
   useEffect(() => {
+    // Set user preference in the local storage
     setUserPreference(theme);
+    // Apply the theme to the body element
+    if (theme === "dark") {
+      document.body.setAttribute("data-theme", "dark");
+    } else {
+      document.body.setAttribute("data-theme", "light");
+    }
   }, [theme]);
 
   function toggleTheme() {
     console.log("changed");
     setTheme((dm) => !dm);
   }
+
+  // Set the theme on the body
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

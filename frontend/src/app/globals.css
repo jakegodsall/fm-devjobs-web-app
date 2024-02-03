@@ -5,6 +5,16 @@
   --light-grey: #9daec2;
   --grey: #9daec2;
   --dark-grey: #6e8098;
+
+  --background: #f4f6f8;
+  --foreground: #fff;
+  --mainTitle: #19202d;
+}
+
+[data-theme="dark"] {
+  --background: #121721;
+  --foreground: #19202d;
+  --mainTitle: #fff;
 }
 
 *,
@@ -22,7 +32,7 @@ html {
 body {
   margin: 0;
   color: var(--very-dark-blue);
-  background-color: #f4f6f8;
+  background-color: var(--background);
 }
 
 li {
