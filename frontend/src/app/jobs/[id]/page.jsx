@@ -1,5 +1,9 @@
+import Button from "@/app/components/UI/FormComponents/Button/Button";
+
 import JobDetailsInfo from "./components/JobDetailsInfo";
 import JobItemHeader from "./components/JobItemHeader/JobItemCompanyInfo";
+
+import styles from "./page.module.css";
 
 const DUMMY_DATA = {
   id: 1,
@@ -55,6 +59,10 @@ export default function JobItemPage() {
         requirements={DUMMY_DATA.requirements}
         role={DUMMY_DATA.role}
       />
+
+      <div className={styles.applyButtonSection}>
+        <Button>Apply Now</Button>
+      </div>
     </section>
   );
 }
