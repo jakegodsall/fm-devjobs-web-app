@@ -544,12 +544,12 @@ export default function JobListingPage() {
 
   const filterForTitle = (job, title) => {
     const formattedJobPosition = job.position.trim().toLowerCase();
-    return formattedJobPosition.includes(title);
+    return formattedJobPosition.includes(title.toLowerCase());
   };
 
   const filterForLocation = (job, location) => {
     const formattedLocation = job.location.trim().toLowerCase();
-    return formattedLocation.includes(location);
+    return formattedLocation.includes(location.toLowerCase());
   };
 
   const filterForIsFullTime = (job) => {
@@ -557,6 +557,9 @@ export default function JobListingPage() {
   };
 
   const handleFilterSubmit = (filters) => {
+    console.log("From Parent: ");
+    console.log(filters);
+
     const newFilteredJobs = jobs.filter((job) => {
       const titleMatch = filters.title
         ? filterForTitle(job, filters.title)
@@ -564,10 +567,11 @@ export default function JobListingPage() {
       const locationMatch = filters.location
         ? filterForLocation(job, filters.location)
         : true;
-      const isFullTimeOnlyMatch = filters.isFullTimeOnly
-        ? filterForIsFullTime(job)
-        : false;
+      const isFullTimeOnlyMatch =
+        filters.isFullTimeOnly === "on" ? filterForIsFullTime(job) : true;
 
+      console.log(job.title);
+      console.log(titleMatch + " " + locationMatch + " " + isFullTimeOnlyMatch);
       return titleMatch && locationMatch && isFullTimeOnlyMatch;
     });
 

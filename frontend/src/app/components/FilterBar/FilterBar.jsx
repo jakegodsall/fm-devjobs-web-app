@@ -16,7 +16,7 @@ export default function FilterBar({ onFilterSubmit }) {
     // Prevent default HTTP POST behaviour
     event.preventDefault();
     // Get FormData of filters
-    constformData = new FormData(event.target);
+    const formData = new FormData(event.target);
     // Convert to an object
     const filters = Object.fromEntries(formData.entries());
     // Pass back to the parent component
@@ -31,7 +31,11 @@ export default function FilterBar({ onFilterSubmit }) {
           src={searchIcon}
           alt="magnifying glass"
         />
-        <TextInput id="filterBar" placeholder="Filter by title..." />
+        <TextInput
+          id="filterBar"
+          placeholder="Filter by title..."
+          name="title"
+        />
         <div className={styles.filterBar__mobileButtons}>
           <Image
             className={styles.filterBar__filterIcon}
@@ -53,11 +57,15 @@ export default function FilterBar({ onFilterSubmit }) {
           src={filterIcon}
           alt="filter"
         />
-        <TextInput id="filterBar" placeholder="Filter by location..." />
+        <TextInput
+          id="filterBar"
+          placeholder="Filter by location..."
+          name="location"
+        />
       </div>
       <div className={styles.filterBar__contractSection}>
         <div className={styles.filterBar__contractCheckboxContainer}>
-          <Checkbox name="" id="full-time-only" />
+          <Checkbox name="isFullTimeOnly" id="full-time-only" />
           <label
             className={styles.filterBar__fullTimeLabel}
             htmlFor="full-time-only"
