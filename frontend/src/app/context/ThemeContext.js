@@ -53,7 +53,7 @@ export function ThemeProvider({ children }) {
 
   function toggleTheme() {
     console.log("changed");
-    setTheme((dm) => !dm);
+    setTheme(theme === "light" ? "dark" : "light");
   }
 
   // Set the theme on the body
