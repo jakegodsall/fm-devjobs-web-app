@@ -11,9 +11,16 @@ import Button from "../UI/FormComponents/Button/Button";
 import TextInput from "../UI/FormComponents/TextInput/TextInput";
 import Checkbox from "../UI/FormComponents/Checkbox/Checkbox";
 
-export default function FilterBar() {
+export default function FilterBar({ onFilterSubmit }) {
   const handleOnSubmit = (event) => {
+    // Prevent default HTTP POST behaviour
     event.preventDefault();
+    // Get FormData of filters
+    constformData = new FormData(event.target);
+    // Convert to an object
+    const filters = Object.fromEntries(formData.entries());
+    // Pass back to the parent component
+    onFilterSubmit(filters);
   };
 
   return (
@@ -59,8 +66,7 @@ export default function FilterBar() {
           </label>
         </div>
         <div className={styles.filterBar__contactButton}>
-
-        <Button>Search</Button>
+          <Button>Search</Button>
         </div>
       </div>
     </form>
