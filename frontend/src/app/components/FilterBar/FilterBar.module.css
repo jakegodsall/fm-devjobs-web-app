@@ -115,11 +115,10 @@
     font-size: 1.6rem;
     font-weight: 700;
     cursor: pointer;
+    color: var(--mainTitle);
   }
 
   .filterBar__searchIconDesktop {
     display: inline;
   }
 }
-
-
