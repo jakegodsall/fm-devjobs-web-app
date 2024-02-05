@@ -578,13 +578,6 @@ export default function JobListingPage() {
     setFilteredJobs(newFilteredJobs);
   };
 
-  // const handleFilterChange = (name, value) => {
-  //   setFilters((prevFilters) => ({
-  //     ...prevFilters,
-  //     [name]: value,
-  //   }));
-  // };
-
   return (
     <div>
       <FilterBar filters={filters} onFilterSubmit={handleFilterSubmit} />
