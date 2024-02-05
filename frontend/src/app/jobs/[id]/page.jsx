@@ -1,7 +1,7 @@
 import Button from "@/app/components/UI/FormComponents/Button/Button";
 
-import JobDetailsInfo from "./components/JobDetailsInfo";
-import JobItemHeader from "./components/JobItemHeader/JobItemCompanyInfo";
+import JobDetailsInfo from "./components/JobDetailsInfo/JobDetailsInfo";
+import JobItemHeader from "./components/JobItemCompanyInfo/JobItemCompanyInfo";
 
 import styles from "./page.module.css";
 

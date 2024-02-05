@@ -8,7 +8,7 @@
   align-items: center;
   position: relative;
 
-  background-color: #fff;
+  background-color: var(--foreground);
   max-width: 35rem;
   border-radius: 0.6rem;
 
@@ -25,6 +25,7 @@
   font-weight: 700;
 
   margin-bottom: 1rem;
+  color: var(--mainTitle);
 }
 
 .jobItemCompanyInfo__website {

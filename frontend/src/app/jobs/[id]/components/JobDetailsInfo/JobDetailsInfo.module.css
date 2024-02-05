@@ -8,7 +8,7 @@
 
   padding: 4rem 2.4rem;
 
-  background-color: #fff;
+  background-color: var(--foreground);
   border-radius: 0.6rem;
   margin-bottom: 6.4rem;
 }
@@ -32,6 +32,7 @@
 .jobDetailsInfo__headerTitle {
   font-size: 2rem;
   font-weight: 700;
+  color: var(--mainTitle);
 }
 
 .jobDetailsInfo__headerLocation {
