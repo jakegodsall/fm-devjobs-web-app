@@ -8,10 +8,14 @@ import Modal from "../../UI/Modal/Modal";
 import styles from "./FilterModal.module.css";
 import Image from "next/image";
 
-export default function FilterModal() {
+export default function FilterModal({ closeModal }) {
+  const handleClickModalContent = (e) => {
+    e.stopPropagation();
+  };
+
   return (
-    <Modal>
-      <form className={styles.filterModal}>
+    <Modal closeModal={closeModal}>
+      <div className={styles.filterModal} onClick={handleClickModalContent}>
         <div className={styles.filterModal__topLine}>
           <Image src={locationIcon} alt="location" height="24" width="17" />
           <TextInput
@@ -23,7 +27,7 @@ export default function FilterModal() {
         <hr className={styles.filterModal__separator} />
         <div className={styles.filterModal__content}>
           <div className={styles.filterModal__fullTimeSection}>
-            <Checkbox name="" id="full-time-only" />
+            <Checkbox name="isFullTimeOnly" id="full-time-only" />
             <label
               className={styles.filterModal_fullTimeLabel}
               htmlFor="full-time-only"
@@ -33,7 +37,7 @@ export default function FilterModal() {
           </div>
           <Button>Search</Button>
         </div>
-      </form>
+      </div>
     </Modal>
   );
 }

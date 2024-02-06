@@ -1,12 +1,12 @@
 .filterModal {
   width: 32.7rem;
-  background-color: #fff;
+  background-color: var(--foreground);
 
   border-radius: 0.8rem;
 }
 
 .filterModal__topLine {
-  padding: 2.4rem;
+  padding-inline: 2.4rem;
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -30,6 +30,8 @@
   font-weight: 700;
 
   margin-bottom: 2.4rem;
+
+  color: var(--mainTitle);
 }
 
 .filterModal_fullTimeLabel {
