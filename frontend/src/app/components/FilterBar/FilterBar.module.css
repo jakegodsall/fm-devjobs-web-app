@@ -36,6 +36,14 @@
   gap: 2.4rem;
 }
 
+.filterBar__refreshIcon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(74%) sepia(7%) saturate(792%)
+    hue-rotate(172deg) brightness(92%) contrast(88%);
+}
+
 .filterBar__filterIcon {
   width: 2rem;
   height: 2rem;

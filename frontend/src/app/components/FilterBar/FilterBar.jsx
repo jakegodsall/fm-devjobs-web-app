@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 
+import refreshIcon from "@public/assets/desktop/icon-refresh.svg";
 import searchIcon from "@public/assets/desktop/icon-search.svg";
 import filterIcon from "@public/assets/mobile/icon-filter.svg";
 
@@ -14,10 +15,20 @@ import Checkbox from "../UI/FormComponents/Checkbox/Checkbox";
 import FilterModal from "../modals/FilterModal/FilterModal";
 
 export default function FilterBar({ onFilterSubmit }) {
+  const formRef = useRef(null);
   const [filterModalOpen, setFilterModalOpen] = useState(false);
 
   const setCloseModal = () => {
     setFilterModalOpen(false);
+  };
+
+  const handleRefreshFilters = () => {
+    formRef.current.reset();
+    const formData = new FormData(formRef.current);
+    // Convert to an object
+    const filters = Object.fromEntries(formData.entries());
+    // Pass back to the parent component
+    onFilterSubmit(filters);
   };
 
   const handleOnSubmit = (event) => {
@@ -31,14 +42,19 @@ export default function FilterBar({ onFilterSubmit }) {
     const formData = new FormData(event.target);
     // Convert to an object
     const filters = Object.fromEntries(formData.entries());
-    console.log(filters);
     // Pass back to the parent component
     onFilterSubmit(filters);
   };
 
   return (
-    <form onSubmit={handleOnSubmit} className={styles.filterBar}>
+    <form onSubmit={handleOnSubmit} className={styles.filterBar} ref={formRef}>
       <div className={styles.filterBar__titleSection}>
+        <Image
+          className={styles.filterBar__refreshIcon}
+          src={refreshIcon}
+          alt="refresh"
+          onClick={handleRefreshFilters}
+        />
         <Image
           className={styles.filterBar__searchIconDesktop}
           src={searchIcon}
