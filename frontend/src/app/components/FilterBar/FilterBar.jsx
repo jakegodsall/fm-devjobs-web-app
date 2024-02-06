@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 import refreshIcon from "@public/assets/desktop/icon-refresh.svg";
@@ -14,8 +14,9 @@ import TextInput from "../UI/FormComponents/TextInput/TextInput";
 import Checkbox from "../UI/FormComponents/Checkbox/Checkbox";
 import FilterModal from "../modals/FilterModal/FilterModal";
 
-export default function FilterBar({ onFilterSubmit }) {
+export default function FilterBar({ filters, onFilterSubmit }) {
   const formRef = useRef(null);
+  const [refreshButtonVisible, setRefreshButtonVisible] = useState(false);
   const [filterModalOpen, setFilterModalOpen] = useState(false);
 
   const setCloseModal = () => {
@@ -30,6 +31,18 @@ export default function FilterBar({ onFilterSubmit }) {
     // Pass back to the parent component
     onFilterSubmit(filters);
   };
+
+  useEffect(() => {
+    if (
+      filters.title !== "" ||
+      filters.location !== "" ||
+      filters.isFullTimeOnly !== false
+    ) {
+      setRefreshButtonVisible(true);
+    } else {
+      setRefreshButtonVisible(false);
+    }
+  }, [filters]);
 
   const handleOnSubmit = (event) => {
     // Close modal if open
@@ -49,12 +62,15 @@ export default function FilterBar({ onFilterSubmit }) {
   return (
     <form onSubmit={handleOnSubmit} className={styles.filterBar} ref={formRef}>
       <div className={styles.filterBar__titleSection}>
-        <Image
-          className={styles.filterBar__refreshIcon}
-          src={refreshIcon}
-          alt="refresh"
-          onClick={handleRefreshFilters}
-        />
+        {refreshButtonVisible && (
+          <Image
+            className={styles.filterBar__refreshIcon}
+            src={refreshIcon}
+            alt="refresh"
+            onClick={handleRefreshFilters}
+          />
+        )}
+
         <Image
           className={styles.filterBar__searchIconDesktop}
           src={searchIcon}

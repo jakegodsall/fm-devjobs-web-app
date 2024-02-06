@@ -52,7 +52,6 @@ export function ThemeProvider({ children }) {
   }, [theme]);
 
   function toggleTheme() {
-    console.log("changed");
     setTheme(theme === "light" ? "dark" : "light");
   }
 

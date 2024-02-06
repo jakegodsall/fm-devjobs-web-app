@@ -557,8 +557,7 @@ export default function JobListingPage() {
   };
 
   const handleFilterSubmit = (filters) => {
-    console.log("From Parent: ");
-    console.log(filters);
+    setFilters(filters);
 
     const newFilteredJobs = jobs.filter((job) => {
       const titleMatch = filters.title
@@ -570,8 +569,6 @@ export default function JobListingPage() {
       const isFullTimeOnlyMatch =
         filters.isFullTimeOnly === "on" ? filterForIsFullTime(job) : true;
 
-      console.log(job.title);
-      console.log(titleMatch + " " + locationMatch + " " + isFullTimeOnlyMatch);
       return titleMatch && locationMatch && isFullTimeOnlyMatch;
     });
 
