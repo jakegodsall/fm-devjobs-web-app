@@ -27,10 +27,10 @@ export default function FilterModal({ closeModal }) {
         <hr className={styles.filterModal__separator} />
         <div className={styles.filterModal__content}>
           <div className={styles.filterModal__fullTimeSection}>
-            <Checkbox name="isFullTimeOnly" id="full-time-only" />
+            <Checkbox name="isFullTimeOnly" id="full-time-only-modal" />
             <label
               className={styles.filterModal_fullTimeLabel}
-              htmlFor="full-time-only"
+              htmlFor="full-time-only-modal"
             >
               Full Time Only
             </label>

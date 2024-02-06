@@ -21,6 +21,10 @@ export default function FilterBar({ onFilterSubmit }) {
   };
 
   const handleOnSubmit = (event) => {
+    // Close modal if open
+    if (filterModalOpen) {
+      setCloseModal();
+    }
     // Prevent default HTTP POST behaviour
     event.preventDefault();
     // Get FormData of filters
