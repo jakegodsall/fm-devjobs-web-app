@@ -21,7 +21,7 @@ export default function FilterModal({ closeModal }) {
           <TextInput
             placeholder="Filter by location..."
             id="location-filter"
-            name="location-filter"
+            name="location"
           />
         </div>
         <hr className={styles.filterModal__separator} />

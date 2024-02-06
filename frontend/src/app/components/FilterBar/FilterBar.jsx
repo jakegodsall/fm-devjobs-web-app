@@ -33,63 +33,61 @@ export default function FilterBar({ onFilterSubmit }) {
   };
 
   return (
-    <>
-      <form onSubmit={handleOnSubmit} className={styles.filterBar}>
-        <div className={styles.filterBar__titleSection}>
-          <Image
-            className={styles.filterBar__searchIconDesktop}
-            src={searchIcon}
-            alt="magnifying glass"
-          />
-          <TextInput
-            id="filterBar"
-            placeholder="Filter by title..."
-            name="title"
-          />
-          <div className={styles.filterBar__mobileButtons}>
-            <Image
-              className={styles.filterBar__filterIcon}
-              src={filterIcon}
-              alt="filter"
-              onClick={() => setFilterModalOpen((prevState) => !prevState)}
-            />
-            <button className={styles.filterBar__searchIconBackground}>
-              <Image
-                className={styles.filterBar__searchIcon}
-                src={searchIcon}
-                alt="magnifying glass"
-              />
-            </button>
-          </div>
-        </div>
-        <div className={styles.filterBar__locationSection}>
+    <form onSubmit={handleOnSubmit} className={styles.filterBar}>
+      <div className={styles.filterBar__titleSection}>
+        <Image
+          className={styles.filterBar__searchIconDesktop}
+          src={searchIcon}
+          alt="magnifying glass"
+        />
+        <TextInput
+          id="filterBar"
+          placeholder="Filter by title..."
+          name="title"
+        />
+        <div className={styles.filterBar__mobileButtons}>
           <Image
             className={styles.filterBar__filterIcon}
             src={filterIcon}
             alt="filter"
+            onClick={() => setFilterModalOpen((prevState) => !prevState)}
           />
-          <TextInput
-            id="filterBar"
-            placeholder="Filter by location..."
-            name="location"
-          />
+          <button className={styles.filterBar__searchIconBackground}>
+            <Image
+              className={styles.filterBar__searchIcon}
+              src={searchIcon}
+              alt="magnifying glass"
+            />
+          </button>
         </div>
-        <div className={styles.filterBar__contractSection}>
-          <div className={styles.filterBar__contractCheckboxContainer}>
-            <Checkbox name="isFullTimeOnly" id="full-time-only" />
-            <label
-              className={styles.filterBar__fullTimeLabel}
-              htmlFor="full-time-only"
-            >
-              Full Time
-            </label>
-          </div>
-          <div className={styles.filterBar__contactButton}>
-            <Button>Search</Button>
-          </div>
+      </div>
+      <div className={styles.filterBar__locationSection}>
+        <Image
+          className={styles.filterBar__filterIcon}
+          src={filterIcon}
+          alt="filter"
+        />
+        <TextInput
+          id="filterBar"
+          placeholder="Filter by location..."
+          name="location"
+        />
+      </div>
+      <div className={styles.filterBar__contractSection}>
+        <div className={styles.filterBar__contractCheckboxContainer}>
+          <Checkbox name="isFullTimeOnly" id="full-time-only" />
+          <label
+            className={styles.filterBar__fullTimeLabel}
+            htmlFor="full-time-only"
+          >
+            Full Time
+          </label>
         </div>
-      </form>
+        <div className={styles.filterBar__contactButton}>
+          <Button>Search</Button>
+        </div>
+      </div>
       {filterModalOpen && <FilterModal closeModal={setCloseModal} />}
-    </>
+    </form>
   );
 }
