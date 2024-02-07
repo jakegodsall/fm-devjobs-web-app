@@ -14,22 +14,18 @@ import TextInput from "../UI/FormComponents/TextInput/TextInput";
 import Checkbox from "../UI/FormComponents/Checkbox/Checkbox";
 import FilterModal from "../modals/FilterModal/FilterModal";
 
-export default function FilterBar({ filters, onFilterSubmit }) {
+export default function FilterBar({
+  filters,
+  onSubmit,
+  handleInputChange,
+  resetFilters,
+}) {
   const formRef = useRef(null);
   const [refreshButtonVisible, setRefreshButtonVisible] = useState(false);
   const [filterModalOpen, setFilterModalOpen] = useState(false);
 
   const setCloseModal = () => {
     setFilterModalOpen(false);
-  };
-
-  const handleRefreshFilters = () => {
-    formRef.current.reset();
-    const formData = new FormData(formRef.current);
-    // Convert to an object
-    const filters = Object.fromEntries(formData.entries());
-    // Pass back to the parent component
-    onFilterSubmit(filters);
   };
 
   useEffect(() => {
@@ -67,7 +63,7 @@ export default function FilterBar({ filters, onFilterSubmit }) {
             className={styles.filterBar__refreshIcon}
             src={refreshIcon}
             alt="refresh"
-            onClick={handleRefreshFilters}
+            onClick={() => resetFilters}
           />
         )}
 
@@ -80,6 +76,8 @@ export default function FilterBar({ filters, onFilterSubmit }) {
           id="filterBar"
           placeholder="Filter by title..."
           name="title"
+          value={filters.title}
+          onChange={handleInputChange}
         />
         <div className={styles.filterBar__mobileButtons}>
           <Image
@@ -107,11 +105,18 @@ export default function FilterBar({ filters, onFilterSubmit }) {
           id="filterBar"
           placeholder="Filter by location..."
           name="location"
+          value={filters.location}
+          onChange={handleInputChange}
         />
       </div>
       <div className={styles.filterBar__contractSection}>
         <div className={styles.filterBar__contractCheckboxContainer}>
-          <Checkbox name="isFullTimeOnly" id="full-time-only" />
+          <Checkbox
+            name="isFullTimeOnly"
+            id="full-time-only"
+            value={filters.isFullTimeOnly}
+            onChange={handleInputChange}
+          />
           <label
             className={styles.filterBar__fullTimeLabel}
             htmlFor="full-time-only"
@@ -123,7 +128,13 @@ export default function FilterBar({ filters, onFilterSubmit }) {
           <Button>Search</Button>
         </div>
       </div>
-      {filterModalOpen && <FilterModal closeModal={setCloseModal} />}
+      {filterModalOpen && (
+        <FilterModal
+          closeModal={setCloseModal}
+          filters={filters}
+          handleInputChange={handleInputChange}
+        />
+      )}
     </form>
   );
 }

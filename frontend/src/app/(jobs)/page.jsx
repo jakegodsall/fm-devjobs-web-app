@@ -541,6 +541,21 @@ export default function JobListingPage() {
     location: "",
     isFullTimeOnly: false,
   });
+  const [filtersAreApplied, setFiltersAreApplied] = useState(false);
+
+  const handleInputChange = (name, value) => {
+    setFilters((prevFilters) => ({ ...prevFilters, [name]: value }));
+    setFiltersAreApplied(true);
+  };
+
+  const resetFilters = () => {
+    setFilteredJobs({
+      title: "",
+      location: "",
+      isFullTimeOnly: false,
+    });
+    setFiltersAreApplied(false);
+  };
 
   const filterForTitle = (job, title) => {
     const formattedJobPosition = job.position.trim().toLowerCase();
@@ -577,7 +592,12 @@ export default function JobListingPage() {
 
   return (
     <div>
-      <FilterBar filters={filters} onFilterSubmit={handleFilterSubmit} />
+      <FilterBar
+        filters={filters}
+        onSubmit={handleFilterSubmit}
+        handleInputChange={handleInputChange}
+        resetFilters={resetFilters}
+      />
       <JoblistingList filteredJobs={filteredJobs} />
     </div>
   );

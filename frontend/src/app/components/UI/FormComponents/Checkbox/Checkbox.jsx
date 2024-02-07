@@ -5,11 +5,12 @@ import Image from "next/image";
 import checkIcon from "@public/assets/desktop/icon-check.svg";
 import styles from "./Checkbox.module.css";
 
-export default function Checkbox({ name, id }) {
+export default function Checkbox({ name, id, value, onChange }) {
   const [isChecked, setIsChecked] = useState(false);
 
-  function toggleCheckbox() {
+  function toggleCheckbox(e) {
     setIsChecked((prevState) => !prevState);
+    onChange(name, e.target.value);
   }
 
   return (
@@ -19,6 +20,7 @@ export default function Checkbox({ name, id }) {
         type="checkbox"
         name={name}
         id={id}
+        checked={value}
         onChange={toggleCheckbox}
       />
       <div className={styles.checkbox__custom}>

@@ -8,7 +8,11 @@ import Modal from "../../UI/Modal/Modal";
 import styles from "./FilterModal.module.css";
 import Image from "next/image";
 
-export default function FilterModal({ closeModal }) {
+export default function FilterModal({
+  closeModal,
+  filters,
+  handleInputChange,
+}) {
   const handleClickModalContent = (e) => {
     e.stopPropagation();
   };
@@ -22,12 +26,19 @@ export default function FilterModal({ closeModal }) {
             placeholder="Filter by location..."
             id="location-filter"
             name="location"
+            value={filters.location}
+            onChange={handleInputChange}
           />
         </div>
         <hr className={styles.filterModal__separator} />
         <div className={styles.filterModal__content}>
           <div className={styles.filterModal__fullTimeSection}>
-            <Checkbox name="isFullTimeOnly" id="full-time-only-modal" />
+            <Checkbox
+              name="isFullTimeOnly"
+              id="full-time-only-modal"
+              value={filters.isFullTimeOnly}
+              onChange={handleInputChange}
+            />
             <label
               className={styles.filterModal_fullTimeLabel}
               htmlFor="full-time-only-modal"
