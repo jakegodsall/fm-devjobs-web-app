@@ -19,6 +19,7 @@ export default function FilterBar({
   onSubmit,
   handleInputChange,
   resetFilters,
+  filtersAreApplied,
 }) {
   const formRef = useRef(null);
   const [refreshButtonVisible, setRefreshButtonVisible] = useState(false);
@@ -27,18 +28,6 @@ export default function FilterBar({
   const setCloseModal = () => {
     setFilterModalOpen(false);
   };
-
-  useEffect(() => {
-    if (
-      filters.title !== "" ||
-      filters.location !== "" ||
-      filters.isFullTimeOnly !== false
-    ) {
-      setRefreshButtonVisible(true);
-    } else {
-      setRefreshButtonVisible(false);
-    }
-  }, [filters]);
 
   const handleOnSubmit = (event) => {
     // Close modal if open
@@ -58,12 +47,12 @@ export default function FilterBar({
   return (
     <form onSubmit={handleOnSubmit} className={styles.filterBar} ref={formRef}>
       <div className={styles.filterBar__titleSection}>
-        {refreshButtonVisible && (
+        {filtersAreApplied && (
           <Image
             className={styles.filterBar__refreshIcon}
             src={refreshIcon}
             alt="refresh"
-            onClick={() => resetFilters}
+            onClick={resetFilters}
           />
         )}
 

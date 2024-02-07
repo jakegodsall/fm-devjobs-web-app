@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import FilterBar from "../components/FilterBar/FilterBar";
 import JoblistingList from "./_components/JobListingList/JobListingList";
@@ -543,15 +543,26 @@ export default function JobListingPage() {
   });
   const [filtersAreApplied, setFiltersAreApplied] = useState(false);
 
+  // useEffect hook to synchronise filtersAreApplied state
+  useEffect(() => {
+    if (
+      filters.title === "" &&
+      filters.location === "" &&
+      filters.isFullTimeOnly === false
+    ) {
+      setFiltersAreApplied(false);
+    }
+  }, [filters]);
+
+  // handle the change of individual form inputs
   const handleInputChange = (name, value) => {
     setFilters((prevFilters) => ({ ...prevFilters, [name]: value }));
     setFiltersAreApplied(true);
-
-    console.log(filters);
   };
 
+  // reset all filters by clicking on reset button
   const resetFilters = () => {
-    setFilteredJobs({
+    setFilters({
       title: "",
       location: "",
       isFullTimeOnly: false,
@@ -599,6 +610,7 @@ export default function JobListingPage() {
         onSubmit={handleFilterSubmit}
         handleInputChange={handleInputChange}
         resetFilters={resetFilters}
+        filtersAreApplied={filtersAreApplied}
       />
       <JoblistingList filteredJobs={filteredJobs} />
     </div>
