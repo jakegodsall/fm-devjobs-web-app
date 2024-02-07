@@ -546,6 +546,8 @@ export default function JobListingPage() {
   const handleInputChange = (name, value) => {
     setFilters((prevFilters) => ({ ...prevFilters, [name]: value }));
     setFiltersAreApplied(true);
+
+    console.log(filters);
   };
 
   const resetFilters = () => {

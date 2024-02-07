@@ -10,7 +10,7 @@ export default function Checkbox({ name, id, value, onChange }) {
 
   function toggleCheckbox(e) {
     setIsChecked((prevState) => !prevState);
-    onChange(name, e.target.value);
+    onChange(name, e.target.checked);
   }
 
   return (
