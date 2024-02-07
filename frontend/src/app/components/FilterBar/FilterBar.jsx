@@ -41,7 +41,7 @@ export default function FilterBar({
     // Convert to an object
     const filters = Object.fromEntries(formData.entries());
     // Pass back to the parent component
-    onFilterSubmit(filters);
+    onSubmit(filters);
   };
 
   return (
