@@ -550,7 +550,7 @@ export default function JobListingPage() {
       filters.location === "" &&
       filters.isFullTimeOnly === false
     ) {
-      setFiltersAreApplied(false);
+      setFilteredJobs(jobs);
     }
   }, [filters]);
 
@@ -568,6 +568,7 @@ export default function JobListingPage() {
       isFullTimeOnly: false,
     });
     setFiltersAreApplied(false);
+    setFilteredJobs(jobs);
   };
 
   const filterForTitle = (job, title) => {

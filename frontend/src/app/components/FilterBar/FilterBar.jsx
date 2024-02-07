@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 import refreshIcon from "@public/assets/desktop/icon-refresh.svg";
 import searchIcon from "@public/assets/desktop/icon-search.svg";
@@ -13,6 +14,29 @@ import Button from "../UI/FormComponents/Button/Button";
 import TextInput from "../UI/FormComponents/TextInput/TextInput";
 import Checkbox from "../UI/FormComponents/Checkbox/Checkbox";
 import FilterModal from "../modals/FilterModal/FilterModal";
+
+const RefreshVariants = {
+  initial: {
+    width: 0,
+    opacity: 0,
+  },
+  animate: {
+    width: "25px",
+    opacity: 1,
+    transition: {
+      width: { duration: 1 },
+      opacity: { duration: 1, delay: 1 },
+    },
+  },
+  exit: {
+    width: 0,
+    opacity: 0,
+    transition: {
+      opacity: { duration: 5 },
+      width: { duration: 5, delay: 5 },
+    },
+  },
+};
 
 export default function FilterBar({
   filters,
@@ -47,14 +71,27 @@ export default function FilterBar({
   return (
     <form onSubmit={handleOnSubmit} className={styles.filterBar} ref={formRef}>
       <div className={styles.filterBar__titleSection}>
-        {filtersAreApplied && (
-          <Image
-            className={styles.filterBar__refreshIcon}
-            src={refreshIcon}
-            alt="refresh"
-            onClick={resetFilters}
-          />
-        )}
+        <AnimatePresence>
+          {filtersAreApplied && (
+            <motion.img
+              className={styles.filterBar__refreshIcon}
+              src={refreshIcon}
+              variants={RefreshVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              layout
+              onClick={resetFilters}
+            />
+
+            /* <Image
+                className={styles.filterBar__refreshIcon}
+                src={refreshIcon}
+                alt="refresh"
+                onClick={resetFilters}
+              /> */
+          )}
+        </AnimatePresence>
 
         <Image
           className={styles.filterBar__searchIconDesktop}

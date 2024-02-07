@@ -37,8 +37,9 @@
 }
 
 .filterBar__refreshIcon {
-  width: 2rem;
-  height: 2rem;
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
   filter: brightness(0) saturate(100%) invert(74%) sepia(7%) saturate(792%)
     hue-rotate(172deg) brightness(92%) contrast(88%);
