@@ -14,20 +14,22 @@ export default function JobListingItem({
 }) {
   return (
     <div className={styles.jobListingItem}>
-      <div className={styles.jobListingItem__companyLogoContainer}>
-        <CompanyLogo
-          src={logo}
-          logoBackground={logoBackground}
-          alt={`${company} logo`}
-        />
-      </div>
-      <div className={styles.jobListingItem__mainContent}>
-        <div className={styles.jobListingItem__topRow}>
-          <p>{postedAt}</p>
-          <p>{contract}</p>
+      <div>
+        <div className={styles.jobListingItem__companyLogoContainer}>
+          <CompanyLogo
+            src={logo}
+            logoBackground={logoBackground}
+            alt={`${company} logo`}
+          />
         </div>
-        <p className={styles.jobListingItem__position}>{position}</p>
-        <p className={styles.jobListingItem__company}>{company}</p>
+        <div className={styles.jobListingItem__mainContent}>
+          <div className={styles.jobListingItem__topRow}>
+            <p>{postedAt}</p>
+            <p>{contract}</p>
+          </div>
+          <p className={styles.jobListingItem__position}>{position}</p>
+          <p className={styles.jobListingItem__company}>{company}</p>
+        </div>
       </div>
       <p className={styles.jobListingItem__location}>{location}</p>
     </div>

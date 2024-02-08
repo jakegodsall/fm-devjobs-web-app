@@ -11,6 +11,11 @@
     width: 93%;
     max-width: 74rem;
   }
+
+  @media screen and (min-width: 1300px) {
+    max-width: 112rem;
+    margin: 4.4rem auto;
+  }
 }
 
 .header::after {
@@ -22,4 +27,12 @@
   height: 13.6rem;
   z-index: -1;
   background-image: url("../../../../public/assets/mobile/bg-pattern-header.svg");
+}
+
+@media screen and (min-width: 1300px) {
+  .header::after {
+    height: 16.2rem;
+    border-bottom-left-radius: 10rem;
+    overflow: hidden;
+  }
 }

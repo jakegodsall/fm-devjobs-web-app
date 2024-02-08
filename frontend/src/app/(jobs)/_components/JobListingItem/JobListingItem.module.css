@@ -1,4 +1,8 @@
 .jobListingItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   position: relative;
 
   margin: 0 auto;
@@ -6,6 +10,7 @@
 
   width: 100%;
   max-width: 35rem;
+  height: 23.1rem;
 
   border-radius: 0.6rem;
   background-color: var(--foreground);
@@ -38,7 +43,7 @@
 .jobListingItem__company {
   font-size: 1.6rem;
   color: var(--dark-grey);
-  margin-bottom: 4.4rem;
+  /* margin-bottom: 4.4rem; */
 }
 
 .jobListingItem__location {
