@@ -96,6 +96,10 @@
     flex: 1;
   }
 
+  .filterBar__titleSection input {
+    max-width: 15rem;
+  }
+
   .filterBar__locationSection {
     flex: 1;
 

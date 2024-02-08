@@ -94,7 +94,6 @@ export default function FilterBar({
             />
           )}
         </AnimatePresence>
-
         <Image
           className={styles.filterBar__searchIconDesktop}
           src={searchIcon}
