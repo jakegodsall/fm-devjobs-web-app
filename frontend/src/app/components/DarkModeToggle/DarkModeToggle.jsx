@@ -13,11 +13,13 @@ import styles from "./DarkModeToggle.module.css";
 import { ThemeContext } from "@/app/context/ThemeContext";
 
 export default function DarkModeToggle() {
-  const { toggleTheme } = useContext(ThemeContext);
-  const [toggleDark, setToggleDark] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  const isDarkMode = theme === "dark";
+
+  console.log(theme);
 
   function handleToggle() {
-    setToggleDark((prevState) => !prevState);
     toggleTheme();
   }
 
@@ -28,7 +30,7 @@ export default function DarkModeToggle() {
         src={SunIcon}
         alt="Sun icon"
       />
-      <Toggle isToggled={toggleDark} toggle={handleToggle} />
+      <Toggle isToggled={isDarkMode} toggle={handleToggle} />
       <Image
         className={styles.darkModeToggle__moonIcon}
         src={MoonIcon}
