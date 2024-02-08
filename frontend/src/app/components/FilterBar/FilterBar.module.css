@@ -19,7 +19,11 @@
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 2.4rem;
+  transition: padding 1s ease-in-out;
+}
+
+.filterBar__titleSectionWithRefresh {
+  position: relative;
 }
 
 .filterBar__locationSection {
@@ -37,7 +41,7 @@
 }
 
 .filterBar__refreshIcon {
-  position: relative;
+  margin-right: 1.6rem;
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
@@ -129,5 +133,6 @@
 
   .filterBar__searchIconDesktop {
     display: inline;
+    margin-right: 2.4rem;
   }
 }
