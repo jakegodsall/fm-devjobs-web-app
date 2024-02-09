@@ -11,8 +11,6 @@
   background-color: var(--foreground);
   max-width: 35rem;
   border-radius: 0.6rem;
-
-  margin-bottom: 2.4rem;
 }
 
 .jobItemCompanyInfo__logoContainer {

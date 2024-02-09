@@ -42,7 +42,7 @@ const DUMMY_DATA = {
 
 export default function JobItemPage() {
   return (
-    <section>
+    <section className={styles.jobItem__page}>
       <JobItemHeader
         logo={DUMMY_DATA.logo}
         logoBackground={DUMMY_DATA.logoBackground}

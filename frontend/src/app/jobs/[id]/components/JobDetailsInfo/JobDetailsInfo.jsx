@@ -14,15 +14,20 @@ export default function JobDetailsInfo({
   console.log(requirements);
   return (
     <div className={styles.jobDetailsInfo}>
-      <div className={styles.jobDetailsInfo__header}>
-        <div className={styles.jobDetailsInfo__headerTop}>
-          <p>{postedAt}</p>
-          <p>{contract}</p>
+      <div className={styles.jobDetailsInfo__top}>
+        <div className={styles.jobDetailsInfo__header}>
+          <div className={styles.jobDetailsInfo__headerTop}>
+            <p>{postedAt}</p>
+            <p>{contract}</p>
+          </div>
+          <p className={styles.jobDetailsInfo__headerTitle}>{position}</p>
+          <p className={styles.jobDetailsInfo__headerLocation}>{location}</p>
         </div>
-        <p className={styles.jobDetailsInfo__headerTitle}>{position}</p>
-        <p className={styles.jobDetailsInfo__headerLocation}>{location}</p>
+        <div className={styles.jobDetailsInfo__topButtonContainer}>
+
+        <Button>Apply Now</Button>
+        </div>
       </div>
-      <Button>Apply Now</Button>
       <p className={styles.jobDetailsInfo__mainDescription}>{description}</p>
       <section className={styles.requirementsSection}>
         <p className={styles.requirementsSection__title}>Requirements</p>
