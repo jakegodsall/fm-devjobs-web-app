@@ -33,6 +33,7 @@ body {
   margin: 0;
   color: var(--very-dark-blue);
   background-color: var(--background);
+  overflow-y: scroll;
 }
 
 li {
