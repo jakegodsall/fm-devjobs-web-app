@@ -9,6 +9,7 @@ export default function JoblistingList({ filteredJobs }) {
           return (
             <li className={styles.jobListingList__item} key={jobListing.id}>
               <JobListingItem
+                id={jobListing.id}
                 company={jobListing.company}
                 position={jobListing.position}
                 logo={jobListing.logo}

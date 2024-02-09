@@ -1,9 +1,10 @@
-import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./JobListingItem.module.css";
 import CompanyLogo from "@/app/components/CompanyLogo/CompanyLogo";
 
 export default function JobListingItem({
+  id,
   company,
   position,
   logo,
@@ -27,7 +28,12 @@ export default function JobListingItem({
             <p>{postedAt}</p>
             <p>{contract}</p>
           </div>
-          <p className={styles.jobListingItem__position}>{position}</p>
+          <Link
+            className={styles.jobListingItem__position}
+            href={`/jobs/${id}`}
+          >
+            {position}
+          </Link>
           <p className={styles.jobListingItem__company}>{company}</p>
         </div>
       </div>

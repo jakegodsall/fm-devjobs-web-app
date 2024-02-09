@@ -1,7 +1,7 @@
 import { Kumbh_Sans } from "next/font/google";
 import "./globals.css";
 
-const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
+const kumbhSans = Kumbh_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 import Header from "./components/Header/Header";
 import { ThemeProvider, ThemeContext } from "./context/ThemeContext";
