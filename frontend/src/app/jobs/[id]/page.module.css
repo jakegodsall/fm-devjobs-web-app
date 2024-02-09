@@ -3,8 +3,3 @@
   flex-direction: column;
   gap: 4.8rem;
 }
-
-.applyButtonSection {
-  padding: 2rem;
-  background-color: var(--foreground);
-}

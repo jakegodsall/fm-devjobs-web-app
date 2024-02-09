@@ -4,6 +4,7 @@ import JobDetailsInfo from "./components/JobDetailsInfo/JobDetailsInfo";
 import JobItemHeader from "./components/JobItemCompanyInfo/JobItemCompanyInfo";
 
 import styles from "./page.module.css";
+import ApplyNowBar from "./components/ApplyNowBar/ApplyNowBar";
 
 const DUMMY_DATA = {
   id: 1,
@@ -60,9 +61,7 @@ export default function JobItemPage() {
         role={DUMMY_DATA.role}
       />
 
-      <div className={styles.applyButtonSection}>
-        <Button>Apply Now</Button>
-      </div>
+      <ApplyNowBar />
     </section>
   );
 }
