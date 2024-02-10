@@ -61,7 +61,10 @@ export default function JobItemPage() {
         role={DUMMY_DATA.role}
       />
 
-      <ApplyNowBar />
+      <ApplyNowBar
+        position={DUMMY_DATA.position}
+        company={DUMMY_DATA.company}
+      />
     </section>
   );
 }

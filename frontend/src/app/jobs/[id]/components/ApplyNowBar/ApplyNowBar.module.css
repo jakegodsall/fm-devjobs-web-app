@@ -1,4 +1,41 @@
-.applyButtonSection {
+.applyNowBar {
   padding: 2rem;
   background-color: var(--foreground);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 500px) {
+    padding: 2rem 5%;
+  }
+}
+
+.applyNowBar__companyInformation {
+  display: none;
+  padding: none;
+
+  @media screen and (min-width: 500px) {
+    display: block;
+  }
+}
+
+.applyNowBar__position {
+  font-size: 2rem;
+  color: var(--mainTitle);
+  font-weight: 700;
+}
+
+.applyNowBar__company {
+  font-size: 1.6rem;
+  color: #6e8098;
+}
+
+.applyNowBar__buttonContainer {
+  width: 100%;
+
+  @media screen and (min-width: 500px) {
+    width: 30%;
+    max-width: 14rem;
+  }
 }
