@@ -1,14 +1,20 @@
 .applyNowBar {
   padding: 2rem;
   background-color: var(--foreground);
-
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   @media screen and (min-width: 500px) {
     padding: 2rem 5%;
   }
+}
+
+.applyNowBar__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70rem;
 }
 
 .applyNowBar__companyInformation {
@@ -24,6 +30,7 @@
   font-size: 2rem;
   color: var(--mainTitle);
   font-weight: 700;
+  margin-bottom: 1.2rem;
 }
 
 .applyNowBar__company {
