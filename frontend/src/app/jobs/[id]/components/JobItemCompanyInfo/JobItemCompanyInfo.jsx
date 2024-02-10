@@ -18,10 +18,14 @@ export default function JobItemCompanyInfo({
           alt={`${company} logo`}
         />
       </div>
-      <p className={styles.jobItemCompanyInfo__title}>{company}</p>
-      <p className={styles.jobItemCompanyInfo__website}>{website}</p>
-      <div className={styles.jobItemCompanyInfo__buttonContainer}>
-        <Button variant="secondary">Company Site</Button>
+      <div className={styles.jobItemCompanyInfo__content}>
+        <div className={styles.jobItemCompanyInfo__textContent}>
+          <p className={styles.jobItemCompanyInfo__title}>{company}</p>
+          <p className={styles.jobItemCompanyInfo__website}>{website}</p>
+        </div>
+        <div className={styles.jobItemCompanyInfo__buttonContainer}>
+          <Button variant="secondary">Company Site</Button>
+        </div>
       </div>
     </div>
   );

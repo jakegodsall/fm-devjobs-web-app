@@ -8,22 +8,61 @@
   align-items: center;
   position: relative;
 
+  max-width: 70rem;
   background-color: var(--foreground);
-  max-width: 35rem;
   border-radius: 0.6rem;
+
+  @media screen and (min-width: 760px) {
+    padding: 0;
+    flex-direction: row;
+  }
 }
 
 .jobItemCompanyInfo__logoContainer {
   position: absolute;
   top: -2rem;
+  width: 5rem;
+  height: 5rem;
+
+  @media screen and (min-width: 760px) {
+    position: static;
+    width: 14rem;
+    height: 14rem;
+  }
+}
+
+.jobItemCompanyInfo__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 760px) {
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+}
+
+.jobItemCompanyInfo__textContent {
+  text-align: center;
+
+  @media screen and (min-width: 760px) {
+    text-align: left;
+  }
 }
 
 .jobItemCompanyInfo__title {
   font-size: 2rem;
   font-weight: 700;
+  margin-top: 2rem;
 
   margin-bottom: 1rem;
   color: var(--mainTitle);
+
+  @media screen and (min-width: 760px) {
+    margin-top: 0;
+  }
 }
 
 .jobItemCompanyInfo__website {
@@ -31,6 +70,10 @@
   color: #6e8098;
 
   margin-bottom: 3rem;
+
+  @media screen and (min-width: 760px) {
+    margin-bottom: 0;
+  }
 }
 
 .jobItemCompanyInfo__buttonContainer {
