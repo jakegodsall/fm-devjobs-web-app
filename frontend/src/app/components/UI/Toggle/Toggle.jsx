@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import styles from "./Toggle.module.css";
 
 export default function Toggle({ isToggled, toggle, hasMounted }) {
@@ -10,7 +12,23 @@ export default function Toggle({ isToggled, toggle, hasMounted }) {
         onChange={toggle}
         checked={isToggled}
       />
-      <label className={styles.toggle__label} htmlFor="toggle"></label>
+      <label
+        className={styles.toggle__label}
+        htmlFor="toggle"
+        data-isOn={isToggled}
+      >
+        <motion.div
+          className={styles.toggle__handle}
+          layout
+          transition={spring}
+        ></motion.div>
+      </label>
     </div>
   );
 }
+
+const spring = {
+  type: "spring",
+  stiffness: 700,
+  damping: 30,
+};

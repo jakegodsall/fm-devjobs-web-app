@@ -15,25 +15,23 @@
   height: 100%;
   width: 100%;
   padding-inline: 0.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   overflow: hidden;
   cursor: pointer;
   background-color: #fff;
   border-radius: 2rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.toggle__label::after {
-  content: "";
-  z-index: 10;
+.toggle__label[data-isOn="true"] {
+  justify-content: flex-end;
+}
+
+.toggle__handle {
   background-color: var(--violet);
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 5rem;
-  transition: transform 0.4s ease-in-out opacity 1s;
-}
-
-.toggle__input:checked + .toggle__label::after {
-  transform: translateX(calc(100% + 0.8rem));
 }
