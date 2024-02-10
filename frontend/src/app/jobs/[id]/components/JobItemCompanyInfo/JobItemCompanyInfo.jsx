@@ -9,6 +9,10 @@ export default function JobItemCompanyInfo({
   company,
   website,
 }) {
+  const parsedUrl = (url) => {
+    return url.split("//")[1];
+  };
+
   return (
     <div className={styles.jobItemCompanyInfo}>
       <div className={styles.jobItemCompanyInfo__logoContainer}>
@@ -21,7 +25,9 @@ export default function JobItemCompanyInfo({
       <div className={styles.jobItemCompanyInfo__content}>
         <div className={styles.jobItemCompanyInfo__textContent}>
           <p className={styles.jobItemCompanyInfo__title}>{company}</p>
-          <p className={styles.jobItemCompanyInfo__website}>{website}</p>
+          <a href="/" className={styles.jobItemCompanyInfo__website}>
+            {parsedUrl(website)}
+          </a>
         </div>
         <div className={styles.jobItemCompanyInfo__buttonContainer}>
           <Button variant="secondary">Company Site</Button>
