@@ -18,10 +18,13 @@
 
 .jobListingItem__companyLogoContainer {
   position: absolute;
-  top: -2rem;
+  transform: translateY(-120%);
+  width: 5rem;
+  height: 5rem;
 }
 
 .jobListingItem__mainContent {
+  margin-top: 1rem;
 }
 
 .jobListingItem__topRow {
