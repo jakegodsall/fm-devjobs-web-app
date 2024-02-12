@@ -5,6 +5,7 @@ const kumbhSans = Kumbh_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 import Header from "./components/Header/Header";
 import { ThemeProvider, ThemeContext } from "./context/ThemeContext";
+import { JobContext, JobProvider } from "./context/JobContext";
 
 export const metadata = {
   title: "Devjobs Web App (Frontend Mentor)",
@@ -16,9 +17,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={kumbhSans.className}>
         <ThemeProvider>
-          <Header />
-          {children}
-          <div id="modal-root"></div>
+          <JobProvider>
+            <Header />
+            {children}
+            <div id="modal-root"></div>
+          </JobProvider>
         </ThemeProvider>
       </body>
     </html>
