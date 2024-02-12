@@ -16,8 +16,6 @@ export default function JobListingPage() {
   });
   const [filtersAreApplied, setFiltersAreApplied] = useState(false);
 
-  console.log(jobs);
-
   // useEffect hook to synchronise filtersAreApplied state
   useEffect(() => {
     if (

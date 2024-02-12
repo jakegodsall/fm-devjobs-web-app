@@ -11,7 +11,6 @@ export default function JobDetailsInfo({
   requirements,
   role,
 }) {
-  console.log(requirements);
   return (
     <div className={styles.jobDetailsInfo}>
       <div className={styles.jobDetailsInfo__top}>
@@ -24,8 +23,7 @@ export default function JobDetailsInfo({
           <p className={styles.jobDetailsInfo__headerLocation}>{location}</p>
         </div>
         <div className={styles.jobDetailsInfo__topButtonContainer}>
-
-        <Button>Apply Now</Button>
+          <Button>Apply Now</Button>
         </div>
       </div>
       <p className={styles.jobDetailsInfo__mainDescription}>{description}</p>
