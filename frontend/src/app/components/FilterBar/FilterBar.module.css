@@ -16,6 +16,7 @@
 }
 
 .filterBar__titleSection {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -30,19 +31,13 @@
   display: none;
 }
 
-.filterBar__titleContainer {
-  width: 100%;
-}
-
-.filterBar__titleContainer___shrink {
-  width: 60%;
-}
-
 .filterBar__contractSection {
   display: none;
 }
 
 .filterBar__mobileButtons {
+  position: absolute;
+  right: 0;
   display: flex;
   align-items: center;
   gap: 2.4rem;

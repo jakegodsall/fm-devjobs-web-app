@@ -99,12 +99,7 @@ export default function FilterBar({
           src={searchIcon}
           alt="magnifying glass"
         />
-        <div
-          className={clsx(
-            styles.filterBar__titleContainer,
-            filtersAreApplied && styles.filterBar__titleContainer___shrink
-          )}
-        >
+        <div className={styles.filterBar__titleContainer}>
           <TextInput
             id="filterBar"
             placeholder="Filter by title..."
