@@ -99,13 +99,20 @@ export default function FilterBar({
           src={searchIcon}
           alt="magnifying glass"
         />
-        <TextInput
-          id="filterBar"
-          placeholder="Filter by title..."
-          name="title"
-          value={filters.title}
-          onChange={handleInputChange}
-        />
+        <div
+          className={clsx(
+            styles.filterBar__titleContainer,
+            filtersAreApplied && styles.filterBar__titleContainer___shrink
+          )}
+        >
+          <TextInput
+            id="filterBar"
+            placeholder="Filter by title..."
+            name="title"
+            value={filters.title}
+            onChange={handleInputChange}
+          />
+        </div>
         <div className={styles.filterBar__mobileButtons}>
           <Image
             className={styles.filterBar__filterIcon}

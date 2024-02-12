@@ -30,6 +30,14 @@
   display: none;
 }
 
+.filterBar__titleContainer {
+  width: 100%;
+}
+
+.filterBar__titleContainer___shrink {
+  width: 60%;
+}
+
 .filterBar__contractSection {
   display: none;
 }
