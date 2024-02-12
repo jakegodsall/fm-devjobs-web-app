@@ -21,6 +21,8 @@
   transform: translateY(-120%);
   width: 5rem;
   height: 5rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
 }
 
 .jobListingItem__mainContent {

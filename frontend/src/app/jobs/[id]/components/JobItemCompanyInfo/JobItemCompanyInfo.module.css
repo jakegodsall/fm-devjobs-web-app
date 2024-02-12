@@ -23,11 +23,14 @@
   top: -2rem;
   width: 5rem;
   height: 5rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
 
   @media screen and (min-width: 760px) {
     position: static;
     width: 14rem;
     height: 14rem;
+    border-radius: 0.6rem;
   }
 }
 
@@ -66,6 +69,7 @@
 }
 
 .jobItemCompanyInfo__website {
+  display: block;
   font-size: 1.6rem;
   color: #6e8098;
 
