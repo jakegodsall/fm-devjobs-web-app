@@ -12,22 +12,23 @@ Users should be able to:
 - See hover states for all interactive elements throughout the site
 - Be able to filter jobs on the index page by title, location, and whether a job is for a full-time position
 - Be able to click a job from the index page so that they can read more information and apply for the job
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
+- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences.
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./finished/desktop-screenshot.png)
 
 ### What I've Learned
 
 - The simplicity of constructing condition class names using [clsx](https://www.npmjs.com/package/clsx).
 - Creating UI components with a `variant` design pattern for improved flexibility.
 - Custom `<ol>` using CSS counters.
+- Using the context API along with CSS variables for theme preferences without overuse of props.
+- Advanced filtering using forms with different layouts at different viewports.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://jakegodsall-devjobs-web-app.netlify.app/)
 
 ## Author
 
