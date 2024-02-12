@@ -1,7 +1,7 @@
 .toggle {
   position: relative;
-  height: 2.6rem;
-  width: 5rem;
+  height: 2.2rem;
+  width: 4rem;
 }
 
 .toggle__input {
@@ -31,7 +31,7 @@
 
 .toggle__handle {
   background-color: var(--violet);
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
   border-radius: 5rem;
 }

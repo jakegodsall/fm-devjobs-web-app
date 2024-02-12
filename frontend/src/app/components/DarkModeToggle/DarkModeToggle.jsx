@@ -28,7 +28,9 @@ export default function DarkModeToggle() {
         src={SunIcon}
         alt="Sun icon"
       />
-      <Toggle isToggled={isDarkMode} toggle={handleToggle} />
+      <div>
+        <Toggle isToggled={isDarkMode} toggle={handleToggle} />
+      </div>
       <Image
         className={styles.darkModeToggle__moonIcon}
         src={MoonIcon}
